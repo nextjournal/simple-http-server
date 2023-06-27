@@ -16,11 +16,11 @@
 
   - `:port` number. defaults to `7777`
   - `:output-level`: `:none`, `:info` (default) or `:verbose`
-  - `:root-path` defaults to `\"public\"`"
+  - `:root-path` defaults to `\".\"`"
   [{:keys [port output-level path browse]
     :or {port 8888
          output-level :info
-         path "public"}}]
+         path "."}}]
   (when-let [running-server @!server]
     (.stop running-server 0))
   (reset! !server (doto (SimpleFileServer/createFileServer (InetSocketAddress. port)
