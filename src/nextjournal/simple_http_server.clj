@@ -14,7 +14,7 @@
 
   Options:
 
-  - `:port` number. defaults to `7777`
+  - `:port` number. defaults to `8888`
   - `:output-level`: `:none`, `:info` (default) or `:verbose`
   - `:root-path` defaults to `\".\"`"
   [{:keys [port output-level path browse]
